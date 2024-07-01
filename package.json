@@ -1,0 +1,14 @@
+{
+  "name": "mg-lo-quiero-ed-backend",
+  "version": "1.0.0",
+  "description": "Este es un proyecto de una E-commerce de productos impresos en 3D ",
+  "main": "\u001b[D\u001b[D\u001b[D\u001bapp\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D\u001b[D",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Migueñl\u001b[\u001b[l Salazar",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

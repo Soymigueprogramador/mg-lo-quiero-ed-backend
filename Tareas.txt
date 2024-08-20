@@ -1,0 +1,21 @@
+Primer pre-entrega.
+
+se debera entregar:
+products:
+1) Se debera desarrollar un servidor que permita gestionar los endpoint de productos y carrito en el E-commerce.
+2) El servirdor debera ser desarrollado en Node.js con Express.js.
+3) Debera disponer de 2 rutas como products y cards, dicros endpoint tendras estos requerimientos:
+   A) El metodo GET('/') DEBERA LISTAR TODOS LOS PRODUCTOS DE LA BASE INCLUYENDO LA LIMITACION DEL ?LIMIT DEL DESAFIO ANTERIOR.
+   B) El metodo GET('/') debera traer solo el ID proporcionado.
+   C) El metodo POST('/:id') debera agregar un nuevo producto con los campos de:
+      ID ( se debera crear aleatoriamente ), 
+      number, 
+   D) El metodo POU('/:ID') debera actualizar un producto sin actualizar el ID.
+   E) El metodo DELETE('pid/') debera eliminar un producto. 
+
+cards:
+1) Tendra su '/api/card' y debera tener 2 rutas.
+    A) El metodo POST('/') debera crear un nuevo carrito con la siguiente estructura:
+       - ID el cual se debe autogenerar y no se debera  .
+       - Productos debera ser un array con objetos que representen a cada producto.
+2) Tendra un GET('/cid') debera listar los productos con el parametro proporcionado.

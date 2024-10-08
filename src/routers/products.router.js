@@ -1,7 +1,5 @@
 import express from 'express';
-import ProductManager from '../controllers/productManager.js';
 
-const manager = new ProductManager('../models/products.json');
 const router = express.Router();
 
 router.post('/', async (req, res) => {

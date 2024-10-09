@@ -2,6 +2,7 @@
   "name": "mg-lo-quiero-ed",
   "version": "1.0.0",
   "type": "module",
+  "proxy": "http://localhost:8080",
   "description": "Este es un proyecto de una E-commerce de productos impresos en 3D ",
   "main": "\u001b[D\u001b[D\u001b[D\u001bapp\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D\u001b[D",
   "scripts": {

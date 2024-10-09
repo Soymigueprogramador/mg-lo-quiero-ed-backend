@@ -13,14 +13,25 @@ const PORT = 8080;
 const app = express();
 
 // Configuración de handlebars como motor de plantilla.
-app.engine('handlebars', ExpressHandlebars.engine());
+/*app.engine('handlebars', ExpressHandlebars.engine());
 app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));*/
 
 // Middlewares
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
+
+
+
+app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+});
+
+
+
+
 
 // Rutas
 app.use('/api/products', productsRouter);
@@ -28,7 +39,7 @@ app.use('/api/card', cardRouter);
 
 // Ruta para el home
 app.get('/', (req, res) => {
-    res.render('index');
+    res.send('API esta prendida');
 });
 
 // Manejador para rutas no encontradas (404)

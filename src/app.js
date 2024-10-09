@@ -6,6 +6,7 @@ import productsRouter from './routers/products.router.js';
 import cardRouter from './routers/card.router.js'; 
 import { __dirname } from './utils.js';
 import config from './config/db.config.js';
+import cors from 'cors'
 
 // Configuraciones básicas como el puerto, express y nombre del proyecto.
 const NAME_ECOMMERCE = 'MG lo quiero 3D';
@@ -21,8 +22,10 @@ app.set('views', path.join(__dirname, 'views'));*/
 app.use(express.urlencoded({ extended: true }));
 //app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
-
-
+app.use(cors({
+  origin: 'http://localhost:5173'
+}));
+// app.use(cors());
 
 app.use(express.static(path.join(__dirname, 'frontend/build')));
 app.get('*', (req, res) => {
